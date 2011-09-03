@@ -1,0 +1,41 @@
+===Adventure Sphinx 0.1=== 
+
+This package should build and install the exectuable called 
+adventure_sphinx, which is an entirely speech based role playing 
+adventure game.  The game itself is "Colossal Cave Adventure", and the 
+speech recognition engine used is CMU Sphinx, and the TTS engine used is 
+Festival.  PortAudio is used for recording input. You will need to have 
+these libraries installed to build this program. (They are in a 
+nonstandard place, you might have to tell autoconf where they are).
+
+Once installed, simply execute "adventure_sphinx" to start playing the 
+game.  The only command line options are -sthresh, which determines the 
+threshold in dB which your voice must exceed to trigger the recording 
+start, and -ethresh, which similarly determines at what level it will be 
+assumed you have stopped speaking (Use negative numbers, as you want to 
+measure dB *below* the maximum level of your input.  Also, the recording 
+bars will visually indicate where these thresholds are, so you can tweak 
+the parameters to match your current environment).  Any other option 
+will be treated as a save file from which to load the game (as per the 
+original "adventure" game).  Once the game has started, all interaction 
+is voice based, except if you are asked to enter the name of a save 
+file.  The text output is just for debugging, and it can help you 
+understand how the speech recognizer is misunderstanding you.
+
+Have fun playing, and remember, it really can't understand even 
+moderately complex sentences.  You sentences essentially have to all be 
+two words, ignoring filler words like prepositions.  Also, if it fails 
+to recognize a word, try again, but if after several tries it's still 
+not working, most likely that word is not in its vocabulary.
+
+Credits:
+
+This program is derived from a project for a class in "Spoken Language 
+Processing" written by Jeremy Salwen, Connie Liu, and Laima Tazmin.
+
+This is a rewritten version by Jeremy Salwen.
+
+Contact:
+
+If you have comments, suggestions, bug reports, or hate mail, please 
+email jeremysalwen@gmail.com.

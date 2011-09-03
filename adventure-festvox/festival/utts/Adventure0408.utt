@@ -1,0 +1,191 @@
+EST_File utterance
+DataType ascii
+version 2
+EST_Header_End
+Features max_id 69 ; type Text ; iform "\"Don't go west.\"" ; filename prompt-utt/Adventure0408.utt ; fileid Adventure0408 ; 
+Stream_Items
+1 id _1 ; name Don't ; whitespace "" ; prepunctuation "" ; 
+2 id _2 ; name go ; whitespace " " ; prepunctuation "" ; 
+3 id _3 ; name west ; punc . ; whitespace " " ; prepunctuation "" ; 
+4 id _6 ; name west ; pos_index 5 ; pos_index_score 0 ; pos jj ; pbreak B ; 
+5 id _7 ; name . ; pos_index 1 ; pos_index_score 0 ; pos punc ; pbreak B ; 
+6 id _5 ; name go ; pos_index 18 ; pos_index_score 0 ; pos vbp ; pbreak NB ; 
+7 id _4 ; name Dont ; pos_index 6 ; pos_index_score 0 ; pos nns ; pbreak NB ; 
+8 id _8 ; name B ; 
+9 id _9 ; name B ; 
+10 id _10 ; name syl ; stress 1 ; 
+11 id _15 ; name syl ; stress 1 ; 
+12 id _18 ; name syl ; stress 1 ; 
+13 id _67 ; name pau ; end 0.15 ; 
+14 id _23 ; name pau ; dur_factor 0 ; end 0.335 ; source_end 0.062272 ; 
+15 id _11 ; name d ; dur_factor 0.504252 ; end 0.405 ; source_end 0.149487 ; 
+16 id _12 ; name ow ; dur_factor -0.0479225 ; end 0.55 ; source_end 0.309349 ; 
+17 id _13 ; name n ; dur_factor 0.0733489 ; end 0.615 ; source_end 0.465036 ; 
+18 id _14 ; name t ; dur_factor -1.0609 ; end 0.64 ; source_end 0.581094 ; 
+19 id _16 ; name g ; dur_factor 0.228448 ; end 0.685 ; source_end 0.695027 ; 
+20 id _17 ; name ow ; dur_factor 0.552212 ; end 0.845 ; source_end 0.86459 ; 
+21 id _19 ; name w ; dur_factor 0.636568 ; end 0.925 ; source_end 1.01759 ; 
+22 id _20 ; name eh ; dur_factor 2.2668 ; end 1.055 ; source_end 1.13984 ; 
+23 id _21 ; name s ; dur_factor 0.163941 ; end 1.175 ; us_diphone_left s_ ; source_end 1.28781 ; 
+24 id _22 ; name t ; dur_factor 0.730381 ; end 1.41 ; us_diphone_right _t ; source_end 1.52598 ; 
+25 id _68 ; name pau ; end 1.56 ; 
+26 id _69 ; name pau ; end 1.71 ; 
+27 id _25 ; name pau ; dur_factor 0 ; end 2 ; source_end 1.8079 ; 
+28 id _24 ; name pau ; dur_factor 0 ; end 1.71885 ; source_end 2.43224 ; 
+29 id _26 ; name L-L% ; 
+30 id _27 ; name H* ; 
+31 id _28 ; name H* ; 
+32 id _29 ; name H* ; 
+33 id _36 ; f0 103.666 ; pos 1.27885 ; 
+34 id _35 ; f0 113.164 ; pos 0.969775 ; 
+35 id _34 ; f0 116.15 ; pos 0.797137 ; 
+36 id _33 ; f0 121.373 ; pos 0.711592 ; 
+37 id _32 ; f0 114.827 ; pos 0.55037 ; 
+38 id _31 ; f0 116.925 ; pos 0.35712 ; 
+39 id _30 ; f0 99.1393 ; pos 0.22 ; 
+40 id _37 ; name pau-d ; sig "[Val wave]" ; coefs "[Val track]" ; middle_frame 5 ; end 0.103787 ; num_frames 10 ; 
+41 id _38 ; name d-ow ; sig "[Val wave]" ; coefs "[Val track]" ; middle_frame 3 ; end 0.240599 ; num_frames 12 ; 
+42 id _39 ; name ow-n ; sig "[Val wave]" ; coefs "[Val track]" ; middle_frame 5 ; end 0.377661 ; num_frames 12 ; 
+43 id _40 ; name n-t ; sig "[Val wave]" ; coefs "[Val track]" ; middle_frame 7 ; end 0.498458 ; num_frames 11 ; 
+44 id _41 ; name t-g ; sig "[Val wave]" ; coefs "[Val track]" ; middle_frame 7 ; end 0.653401 ; num_frames 15 ; 
+45 id _42 ; name g-ow ; sig "[Val wave]" ; coefs "[Val track]" ; middle_frame 2 ; end 0.780464 ; num_frames 11 ; 
+46 id _43 ; name ow-w ; sig "[Val wave]" ; coefs "[Val track]" ; middle_frame 6 ; end 0.959965 ; num_frames 15 ; 
+47 id _44 ; name w-eh ; sig "[Val wave]" ; coefs "[Val track]" ; middle_frame 4 ; end 1.07484 ; num_frames 10 ; 
+48 id _45 ; name eh-s ; sig "[Val wave]" ; coefs "[Val track]" ; middle_frame 5 ; end 1.20523 ; num_frames 12 ; 
+49 id _46 ; name s_-_t ; sig "[Val wave]" ; coefs "[Val track]" ; middle_frame 7 ; end 1.38072 ; num_frames 17 ; 
+50 id _47 ; name t-pau ; sig "[Val wave]" ; coefs "[Val track]" ; middle_frame 13 ; end 1.63671 ; num_frames 25 ; 
+51 id _48 ; name pau-pau ; sig "[Val wave]" ; coefs "[Val track]" ; middle_frame 16 ; end 2.12007 ; num_frames 48 ; 
+52 id _49 ; name coef ; coefs "[Val track]" ; frame "[Val wavevector]" ; 
+53 id _50 ; name f0 ; f0 "[Val track]" ; 
+54 id _51 ; coefs "[Val track]" ; 
+55 id _52 ; 
+56 id _53 ; map "[Val ivector]" ; 
+57 id _54 ; wave "[Val wave]" ; 
+End_of_Stream_Items
+Relations
+Relation Token ; "(" ")" ; 
+4 7 1 0 0 0
+1 1 0 4 2 0
+5 6 2 0 0 0
+2 2 0 5 3 1
+6 4 3 0 7 0
+7 5 0 0 0 6
+3 3 0 6 0 2
+End_of_Relation
+Relation Word ; "(" ")" ; 
+1 7 0 0 2 0
+2 6 0 0 3 1
+3 4 0 0 0 2
+End_of_Relation
+Relation Phrase ; "(" ")" ; 
+3 7 1 0 4 0
+4 6 0 0 5 3
+5 4 0 0 0 4
+1 8 0 3 2 0
+2 9 0 0 0 1
+End_of_Relation
+Relation Syllable ; "(" ")" ; 
+1 10 0 0 2 0
+2 11 0 0 3 1
+3 12 0 0 0 2
+End_of_Relation
+Relation Segment ; "(" ")" ; 
+1 13 0 0 2 0
+2 14 0 0 3 1
+3 15 0 0 4 2
+4 16 0 0 5 3
+5 17 0 0 6 4
+6 18 0 0 7 5
+7 19 0 0 8 6
+8 20 0 0 9 7
+9 21 0 0 10 8
+10 22 0 0 11 9
+11 23 0 0 12 10
+12 24 0 0 13 11
+13 25 0 0 14 12
+14 26 0 0 15 13
+15 27 0 0 16 14
+16 28 0 0 0 15
+End_of_Relation
+Relation SylStructure ; "(" ")" ; 
+6 15 5 0 7 0
+7 16 0 0 8 6
+8 17 0 0 9 7
+9 18 0 0 0 8
+5 10 1 6 0 0
+1 7 0 5 2 0
+11 19 10 0 12 0
+12 20 0 0 0 11
+10 11 2 11 0 0
+2 6 0 10 3 1
+14 21 13 0 15 0
+15 22 0 0 16 14
+16 23 0 0 17 15
+17 24 0 0 0 16
+13 12 3 14 0 0
+3 4 0 13 4 2
+4 5 0 0 0 3
+End_of_Relation
+Relation IntEvent ; "(" ")" ; 
+1 29 0 0 2 0
+2 30 0 0 3 1
+3 31 0 0 4 2
+4 32 0 0 0 3
+End_of_Relation
+Relation Intonation ; "(" ")" ; 
+4 29 1 0 5 0
+5 32 0 0 0 4
+1 12 0 4 2 0
+6 30 2 0 0 0
+2 10 0 6 3 1
+7 31 3 0 0 0
+3 11 0 7 0 2
+End_of_Relation
+Relation Target ; "(" ")" ; 
+8 39 1 0 0 0
+1 15 0 8 2 0
+9 38 2 0 0 0
+2 16 0 9 3 1
+10 37 3 0 0 0
+3 19 0 10 4 2
+11 36 4 0 0 0
+4 20 0 11 5 3
+12 35 5 0 0 0
+5 21 0 12 6 4
+13 34 6 0 0 0
+6 22 0 13 7 5
+14 33 7 0 0 0
+7 24 0 14 0 6
+End_of_Relation
+Relation Unit ; grouped 1 ; 
+1 40 0 0 2 0
+2 41 0 0 3 1
+3 42 0 0 4 2
+4 43 0 0 5 3
+5 44 0 0 6 4
+6 45 0 0 7 5
+7 46 0 0 8 6
+8 47 0 0 9 7
+9 48 0 0 10 8
+10 49 0 0 11 9
+11 50 0 0 12 10
+12 51 0 0 0 11
+End_of_Relation
+Relation SourceCoef ; "(" ")" ; 
+1 52 0 0 0 0
+End_of_Relation
+Relation f0 ; "(" ")" ; 
+1 53 0 0 0 0
+End_of_Relation
+Relation TargetCoef ; "(" ")" ; 
+1 54 0 0 2 0
+2 55 0 0 0 1
+End_of_Relation
+Relation US_map ; "(" ")" ; 
+1 56 0 0 0 0
+End_of_Relation
+Relation Wave ; "(" ")" ; 
+1 57 0 0 0 0
+End_of_Relation
+End_of_Relations
+End_of_Utterance

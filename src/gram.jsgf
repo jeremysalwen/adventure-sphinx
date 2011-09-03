@@ -1,0 +1,108 @@
+#JSGF v1.0;
+
+grammar edu.jas.adventure;
+   
+
+public <ynanswer> = (yes [please]) | yeah | okay| (no [thank you])| nope;
+<weapon> = axe | wand | rod; 
+<article> =(the);
+<lamp_item> = lamp | lantern | light | headlight | (head lamp);
+<item> = <weapon>| <lamp_item> | battery | carpet | barrel | gold 
+| ([gold] nugget) | diamond | ([silver] bars) |silver | jewel | coins | chest 
+| box | treasure | eggs | egg | nest | trident | ( [ming] vase)  
+| (shards [of pottery]) | pottery | emerald | platinum | pyramid 
+| (platinum pyramid) | pearl | ([persian] rug) | spice | chain 
+| (vending machine) | knife | knives | food | rations | bottle | jar | water 
+| oil | debris | shell  | keys | key | grate | cage |  pillow 
+| velvet | tablet | magazine | issue 	
+| mirror | mist | lock | nothing | oyster | clam;
+
+<organism> = troll | bear | dragon | bird | pirate | dwarf | dwarves | snake 
+  | clam | oyster | plant 
+  | giant | shadow | figure ;
+
+<voice_verb> = (say | chant | sing | utter | mumble) ;
+<location> =  depression | road | hill | forest | valley | gully | stream | passage 
+| tunnel | chasm | fissure | pit | outdoor | outdoors | crack | cave | entrance 
+| slit | slab | tree | trees | (bed quilt) | office | cavern | floor | house | dome 
+| hall | view | staircase | stairs | steps | (oriental room) | reservoir | volcano 
+| geyser|hole | wall | message |(low room) | building | drawings | door | grate
+| fork | bed |moss |carpet| ([awkward|secret] canyon) | ([broken] rock) 
+|(main (corridor | office)) |([debris | dark] room) |(low (window| passage | tunnel));
+<move_action> = enter | return | jump | climb | retreat | retread | continue | walk | run | exit | leave | crawl | ascend | descend | cross|swim ;
+<ambiguous_move_action> = travel | proceed | go | explore | follow | turn ;
+
+<unambiguous_direction> = upstream | downstream | forward | onward | back | outside | inward | nowhere | downward |left | right | upward | east |  west | north  | south;
+
+<explosive_verb> = blast | detonate | ignite | (blow up);
+<attack_verb> = attack | kill | slay | fight | hit | strike | smash | <explosive_verb>;
+<magic_verb> = abra | abracadabra | (hocus pocus) | (x y z z y) | (open sesame);
+<item_verb> = carry | (pick up) | take | keep | catch | steal | capture 
+| get | tote | drop | release | free | discard | dump | throw | toss | find 
+| rub | fill | shatter | break | read | peruse;
+<menu_action> =  (where am i)
+	     | (i am lost) 
+	     | help | inventory | suspend | pause | save | stop | quit | hours 
+	     | score |  info | information| brief;
+
+<examine_verb>= (describe | look | examine | touch) ;
+
+<item_to_open_close> = door | grate |house | oyster | clam | chain | jar | bottle;
+<open_close_verb>= (unlock | open | lock | close) ;
+<digging_verb> =dig | excavate ;
+
+<animal_verb> = feed | calm | tame | placate | wake | disturb;
+<animal_action> = <animal_verb> [<article>] <organism> ;
+
+<explosive_action> = <explosive_verb> [<article>] <location> ;
+
+<target>  =<organism> | <item>;
+<fight_action> = <attack_verb> [[<article>] <target>] ;
+
+<attack_item_verb>= wave | shake | swing;
+<attack_item_action> =  <attack_item_verb> [<article>] <item> ;
+
+<food_verb> = pour | eat | devour | drink;
+<food_action>  = <food_verb> [<article>] <target> ;
+
+<off_on> = (on|off);
+
+<lamp_verb>  =light 
+	      | extinguish 
+	      | (turn [<off_on>]) ; 
+<lamp_action> = (<lamp_verb> [<article>] <lamp_item>) 
+	     | (turn [<article>] <lamp_item> <off_on>) ;
+
+<digging_action> =  <digging_verb> [<location>] ;
+		
+
+<item_action>= <item_verb> [<article>] <item>;
+
+<magic_action> =[<voice_verb>] <magic_verb>;
+
+<examine_target>=(<location> | <item> 
+			   | <organism>) ;
+			   
+<examine_action> =<examine_verb> [[at] [<article>] <examine_target>] ;
+
+
+<fluid_verb> =(water | oil);    
+<fluid_action> =  <fluid_verb> [<article>] <target> ;
+
+<open_close_action> =<open_close_verb> [<article>] <item_to_open_close>;
+
+<opt_of> =([of]);
+<modifier_direction>= to | into | on | (off <opt_of>);
+<opt_modifier_direction> = ((inside | out) <opt_of> )| in | up | above | down | across | over | under | onto;
+
+<directional_phrase> = <unambiguous_direction> 
+		    | (<modifier_direction> [<article>] <location>)
+		    | (<opt_modifier_direction> [[<article>] <location>]) ;
+<move_phrase> = (<move_action> [<directional_phrase>]) 
+	     | (<ambiguous_move_action> <directional_phrase>) ; 
+
+<thing_to_say> = <item> | <organism> | <location> | hello | hi | <ynanswer>;
+<voice_action> = <voice_verb> <thing_to_say> ;
+
+
+public <command> = <voice_action> | <move_phrase> | <open_close_action> | <fluid_action> | <food_action> | <menu_action> | <examine_action> | <magic_action> | <item_action> |<lamp_action> | <digging_action> | <fight_action> | <attack_item_action> | <explosive_action> | <animal_action>;

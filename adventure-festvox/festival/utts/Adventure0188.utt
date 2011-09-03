@@ -1,0 +1,138 @@
+EST_File utterance
+DataType ascii
+version 2
+EST_Header_End
+Features max_id 45 ; type Text ; iform "\"eat what?\"" ; filename prompt-utt/Adventure0188.utt ; fileid Adventure0188 ; 
+Stream_Items
+1 id _1 ; name eat ; whitespace "" ; prepunctuation "" ; 
+2 id _2 ; name what ; punc ? ; whitespace " " ; prepunctuation "" ; 
+3 id _4 ; name what ; pos_index 23 ; pos_index_score 0 ; pos wp ; pbreak B ; 
+4 id _5 ; name ? ; pos_index 1 ; pos_index_score 0 ; pos punc ; pbreak B ; 
+5 id _3 ; name eat ; pos_index 10 ; pos_index_score 0 ; pos vb ; pbreak NB ; 
+6 id _6 ; name B ; 
+7 id _7 ; name syl ; stress 1 ; 
+8 id _10 ; name syl ; stress 1 ; 
+9 id _42 ; name pau ; end 0.15 ; 
+10 id _43 ; name pau ; end 0.3 ; 
+11 id _14 ; name pau ; dur_factor 0 ; end 0.515 ; source_end 0.150453 ; 
+12 id _8 ; name iy ; dur_factor 0.552212 ; end 0.705 ; source_end 0.272418 ; 
+13 id _9 ; name t ; dur_factor 0.785204 ; end 1.01 ; source_end 0.401065 ; 
+14 id _11 ; name w ; dur_factor 0.09447 ; end 1.08 ; source_end 0.518877 ; 
+15 id _12 ; name ah ; dur_factor 2.02008 ; end 1.24 ; us_diphone aa ; source_end 0.636752 ; 
+16 id _13 ; name t ; dur_factor 0.730381 ; end 1.335 ; source_end 0.856613 ; 
+17 id _44 ; name pau ; end 1.485 ; 
+18 id _45 ; name pau ; end 1.785 ; 
+19 id _15 ; name pau ; dur_factor 0 ; end 2 ; source_end 1.07806 ; 
+20 id _16 ; name H-H% ; 
+21 id _17 ; name H* ; 
+22 id _22 ; f0 123.393 ; pos 0.765322 ; 
+23 id _21 ; f0 123.213 ; pos 0.589962 ; 
+24 id _20 ; f0 122.684 ; pos 0.445879 ; 
+25 id _18 ; f0 107.801 ; pos 0.22 ; 
+26 id _19 ; f0 127.005 ; pos 0.285802 ; 
+27 id _23 ; name pau-iy ; sig "[Val wave]" ; coefs "[Val track]" ; middle_frame 14 ; end 0.227981 ; num_frames 23 ; 
+28 id _24 ; name iy-t ; sig "[Val wave]" ; coefs "[Val track]" ; middle_frame 3 ; end 0.317523 ; num_frames 8 ; 
+29 id _25 ; name t-w ; sig "[Val wave]" ; coefs "[Val track]" ; middle_frame 7 ; end 0.46419 ; num_frames 14 ; 
+30 id _26 ; name w-aa ; sig "[Val wave]" ; coefs "[Val track]" ; middle_frame 4 ; end 0.583815 ; num_frames 11 ; 
+31 id _27 ; name aa-t ; sig "[Val wave]" ; coefs "[Val track]" ; middle_frame 4 ; end 0.711349 ; num_frames 12 ; 
+32 id _28 ; name t-pau ; sig "[Val wave]" ; coefs "[Val track]" ; middle_frame 13 ; end 0.967337 ; num_frames 25 ; 
+33 id _29 ; name coef ; coefs "[Val track]" ; frame "[Val wavevector]" ; 
+34 id _30 ; name f0 ; f0 "[Val track]" ; 
+35 id _31 ; coefs "[Val track]" ; 
+36 id _32 ; 
+37 id _33 ; map "[Val ivector]" ; 
+38 id _34 ; wave "[Val wave]" ; 
+End_of_Stream_Items
+Relations
+Relation Token ; "(" ")" ; 
+3 5 1 0 0 0
+1 1 0 3 2 0
+4 3 2 0 5 0
+5 4 0 0 0 4
+2 2 0 4 0 1
+End_of_Relation
+Relation Word ; "(" ")" ; 
+1 5 0 0 2 0
+2 3 0 0 0 1
+End_of_Relation
+Relation Phrase ; "(" ")" ; 
+2 5 1 0 3 0
+3 3 0 0 0 2
+1 6 0 2 0 0
+End_of_Relation
+Relation Syllable ; "(" ")" ; 
+1 7 0 0 2 0
+2 8 0 0 0 1
+End_of_Relation
+Relation Segment ; "(" ")" ; 
+1 9 0 0 2 0
+2 10 0 0 3 1
+3 11 0 0 4 2
+4 12 0 0 5 3
+5 13 0 0 6 4
+6 14 0 0 7 5
+7 15 0 0 8 6
+8 16 0 0 9 7
+9 17 0 0 10 8
+10 18 0 0 11 9
+11 19 0 0 0 10
+End_of_Relation
+Relation SylStructure ; "(" ")" ; 
+5 12 4 0 6 0
+6 13 0 0 0 5
+4 7 1 5 0 0
+1 5 0 4 2 0
+8 14 7 0 9 0
+9 15 0 0 10 8
+10 16 0 0 0 9
+7 8 2 8 0 0
+2 3 0 7 3 1
+3 4 0 0 0 2
+End_of_Relation
+Relation IntEvent ; "(" ")" ; 
+1 20 0 0 2 0
+2 21 0 0 0 1
+End_of_Relation
+Relation Intonation ; "(" ")" ; 
+3 20 1 0 0 0
+1 8 0 3 2 0
+4 21 2 0 0 0
+2 7 0 4 0 1
+End_of_Relation
+Relation Target ; "(" ")" ; 
+5 25 1 0 6 0
+6 26 0 0 0 5
+1 12 0 5 2 0
+7 24 2 0 0 0
+2 14 0 7 3 1
+8 23 3 0 0 0
+3 15 0 8 4 2
+9 22 4 0 0 0
+4 16 0 9 0 3
+End_of_Relation
+Relation Unit ; grouped 1 ; 
+1 27 0 0 2 0
+2 28 0 0 3 1
+3 29 0 0 4 2
+4 30 0 0 5 3
+5 31 0 0 6 4
+6 32 0 0 0 5
+End_of_Relation
+Relation SourceCoef ; "(" ")" ; 
+1 33 0 0 0 0
+End_of_Relation
+Relation f0 ; "(" ")" ; 
+1 34 0 0 0 0
+End_of_Relation
+Relation TargetCoef ; "(" ")" ; 
+1 35 0 0 2 0
+2 36 0 0 0 1
+End_of_Relation
+Relation US_map ; "(" ")" ; 
+1 37 0 0 0 0
+End_of_Relation
+Relation Wave ; "(" ")" ; 
+1 38 0 0 0 0
+End_of_Relation
+End_of_Relations
+End_of_Utterance

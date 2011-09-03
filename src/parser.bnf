@@ -1,0 +1,108 @@
+w_ ::= [{" "}];
+_w ::= [{' '}];
+
+ynanswer ::= ((('yes' [w_ 'please']) | 'yeah' | 'okay') `yes`) | ((('no' [w_ 'thank' w_ 'you'])| 'nope') `no`);
+weapon ::= "axe" | "wand" | "rod"; 
+article ::=('the');
+lamp_item ::= "lamp" | "lantern" | "light" | "headlight" | ("head" _w "lamp");
+item ::= weapon| lamp_item | "battery" | "carpet" | "barrel" | "gold" 
+| (['gold' w_] "nugget") | "diamond" | (['silver' w_] "bars") |"silver" | "jewel" | "coins" | "chest" 
+| "box" | "treasure" | "eggs" | "egg" | "nest" | "trident" | ( ['ming' w_] "vase")  
+| ("shards" [w_ 'of' w_ 'pottery']) | "pottery" | "emerald" | "platinum" | "pyramid" 
+| ("platinum" w_ 'pyramid') | "pearl" | (['persian' w_] "rug") | "spice" | "chain" 
+| ("vending" _w 'machine') | "knife" | "knives" | "food" | "rations" | "bottle" | "jar" | "water" 
+| "oil" | "debris" | "shell"  | "keys" | "key" | "grate" | "cage" |  "pillow" 
+| "velvet" | "tablet" | "magazine" | "issue" 	
+| "mirror" | "mist" | "lock" | "nothing" | "oyster" | "clam";
+
+organism ::= "troll" | "bear" | "dragon" | "bird" | "pirate" | "dwarf" | "dwarves" | "snake" 
+  | "clam" | "oyster" | "plant" 
+  | "giant" | "shadow" | "figure" ;
+
+voice_verb ::= ("say" | "chant" | "sing" | "utter" | "mumble") ;
+location ::=  "depression" | "road" | "hill" | "forest" | "valley" | "gully" | "stream" | "passage" 
+| "tunnel" | "chasm" | "fissure" | "pit" | "outdoor" | "outdoors" | "crack" | "cave" | "entrance" 
+| "slit" | "slab" | "tree" | "trees" | ("bed" _w "quilt") | "office" | "cavern" | "floor" | "house" | "dome" 
+| "hall" | "view" | "staircase" | "stairs" | "steps" | ("oriental" _w 'room') | "reservoir" | "volcano" 
+| "geyser"|"hole" | "wall" | "message" |("low" _w 'room') | "building" | "drawings" | "door" | "grate"
+| "fork" | "bed" |"moss" |"carpet"| (["awkward"|"secret"] w_ "canyon") | (["broken"] w_ "rock") 
+|("main" w_ ("corridor" | "office")) |(["debris" | "dark"] w_ "room") |("low" w_ ("window"| "passage" | "tunnel"));
+move_action ::= "enter" | "return" | "jump" | "climb" | "retreat" | "retread" | "continue" | "walk" | "run" | "exit" | "leave" | "crawl" | "ascend" | "descend" | "cross"|"swim" ;
+ambiguous_move_action ::= "travel" | "proceed" | "go" | "explore" | "follow" | "turn" ;
+
+unambiguous_direction ::= "up" _w "stream" | "down" _w "stream" | "forward" | "onward" | "back" | "outside" | "inward" | "nowhere" | "downward" |"left" | "right" | "upward" | "east" |  "west" | "north"  | "south";
+
+explosive_verb ::= "blast" | "detonate" | "ignite" | ("blow" w_ "up");
+attack_verb ::= "attack" | "kill" | "slay" | "fight" | "hit" | "strike" | "smash" | explosive_verb;
+magic_verb ::= "abra" | "abracadabra" | ("hocus" w_ 'pocus') | ('x' w_ 'y' w_ 'z' w_ 'z' w_ 'y' `xyzzy`) | ("open" _w  "sesame");
+item_verb ::= "carry" | ('pick' _w 'up' `take`) | "take" | "keep" | "catch" | "steal" | "capture" 
+| "get" | "tote" | "drop" | "release" | "free" | "discard" | "dump" | "throw" | "toss" | "find" 
+| "rub" | "fill" | "shatter" | "break" | "read" | "peruse";
+menu_action ::=  ("where" _w 'am' _w 'i')
+	     | ('i' _w 'am' _w "lost") 
+	     | "help" | "inventory" | "suspend" | "pause" | "save" | "stop" | "quit" | "hours" 
+	     | "score" |  "info" | "information"| "brief";
+
+examine_verb::= ("describe" | "look" | "examine" | "touch") ;
+
+item_to_open_close ::= "door" | "grate" |"house" | "oyster" | "clam" | "chain" | "jar" | "bottle";
+open_close_verb::= ("unlock" | "open" | "lock" | "close") ;
+digging_verb ::="dig" | "excavate" ;
+
+animal_verb ::= "feed" | "calm" | "tame" | "placate" | "wake" | "disturb";
+animal_action ::= animal_verb [w_ article] w_ organism ;
+
+explosive_action ::= explosive_verb [w_ article] w_ location ;
+
+target  ::=organism | item;
+fight_action ::= attack_verb [[w_ article] w_ target] ;
+
+attack_item_verb::= "wave" | "shake" | "swing";
+attack_item_action ::=  attack_item_verb w_ [article w_] item ;
+
+food_verb ::= "pour" | "eat" | "devour" | "drink";
+food_action  ::= food_verb [w_ article] w_ target ;
+
+off_on ::= ("on"|"off");
+
+lamp_verb  ::= "light" 
+	      | "extinguish" 
+	      | ('turn' w_ off_on) ; 
+lamp_action ::= (lamp_verb [w_ article] w_ lamp_item) 
+	     | ('turn' [w_ article] w_ lamp_item w_ off_on) ;
+
+digging_action ::=  digging_verb [w_ [article w_] location] ;
+		
+
+item_action::= item_verb w_ [article w_] item;
+
+magic_action ::=[voice_verb w_] magic_verb;
+
+examine_target::=(location | item 
+			   | organism) ;
+			   
+examine_action ::=examine_verb [[ w_ 'at'] [ w_ article] w_ examine_target] ;
+
+
+fluid_verb ::=("water" | "oil");    
+fluid_action ::=  fluid_verb [w_ article] w_ target ;
+
+open_close_action ::=open_close_verb [w_ article] w_ item_to_open_close;
+
+opt_of ::=(w_ ['of']);
+modifier_direction::= 'to' | 'into' | 'on' | ('off' opt_of);
+opt_modifier_direction_nooutput ::=[(('inside' | 'out') opt_of )| 'in' | 'up' | 'above' | 'down' | 'across' | 'over' | 'under' | 'onto' w_];
+opt_modifier_direction_output ::= [(("inside" | "out") opt_of )| "in" | "up" | "above" | "down" | "across" | "over" | "under" | "onto"];
+
+directional_phrase ::= unambiguous_direction 
+		    | (modifier_direction [w_ article] w_ location)
+		    | (opt_modifier_direction_nooutput [article w_]  location)
+		    | opt_modifier_direction_output;
+move_phrase ::= (move_action [w_ directional_phrase]) 
+	     | (ambiguous_move_action  w_ directional_phrase) ; 
+
+thing_to_say ::= item | organism | location | "hello" | "hi" | ynanswer;
+voice_action ::= voice_verb w_ thing_to_say ;
+
+
+command ::= _w (voice_action | move_phrase | open_close_action | fluid_action | food_action | menu_action | examine_action | magic_action | item_action |lamp_action | digging_action | explosive_action |fight_action | attack_item_action | animal_action);

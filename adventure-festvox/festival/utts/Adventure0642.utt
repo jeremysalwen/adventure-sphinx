@@ -1,0 +1,133 @@
+EST_File utterance
+DataType ascii
+version 2
+EST_Header_End
+Features max_id 44 ; type Text ; iform "\"Batteries\"" ; filename prompt-utt/Adventure0642.utt ; fileid Adventure0642 ; 
+Stream_Items
+1 id _1 ; name Batteries ; whitespace "" ; prepunctuation "" ; 
+2 id _2 ; name Batteries ; pos_index 6 ; pos_index_score 0 ; pos nns ; pbreak B ; 
+3 id _3 ; name B ; 
+4 id _4 ; name syl ; stress 1 ; 
+5 id _8 ; name syl ; stress 0 ; 
+6 id _10 ; name syl ; stress 0 ; 
+7 id _13 ; name pau ; dur_factor 0 ; end 0.125 ; source_end 0.08138 ; 
+8 id _5 ; name b ; dur_factor 0.525806 ; end 0.18 ; source_end 0.186119 ; 
+9 id _6 ; name ae ; dur_factor 0.556537 ; end 0.335 ; source_end 0.347411 ; 
+10 id _7 ; name t ; dur_factor 0.00698725 ; end 0.41 ; source_end 0.482708 ; 
+11 id _9 ; name er ; dur_factor -0.038356 ; end 0.505 ; source_end 0.614156 ; 
+12 id _11 ; name iy ; dur_factor 2.2668 ; end 0.715 ; source_end 0.74403 ; 
+13 id _12 ; name z ; dur_factor 0.212421 ; end 0.81 ; source_end 0.869942 ; 
+14 id _14 ; name pau ; dur_factor 0 ; end 1 ; source_end 1.15051 ; 
+15 id _15 ; name L-L% ; 
+16 id _16 ; name H* ; 
+17 id _23 ; f0 95.8999 ; pos 0.938929 ; 
+18 id _21 ; f0 103.963 ; pos 0.635152 ; 
+19 id _22 ; f0 98.1532 ; pos 0.739618 ; 
+20 id _19 ; f0 112.577 ; pos 0.540974 ; 
+21 id _20 ; f0 108.346 ; pos 0.588063 ; 
+22 id _18 ; f0 117.208 ; pos 0.386801 ; 
+23 id _17 ; f0 101.916 ; pos 0.22 ; 
+24 id _24 ; name pau-b ; sig "[Val wave]" ; coefs "[Val track]" ; middle_frame 7 ; end 0.152588 ; num_frames 15 ; 
+25 id _25 ; name b-ae ; sig "[Val wave]" ; coefs "[Val track]" ; middle_frame 2 ; end 0.277098 ; num_frames 11 ; 
+26 id _26 ; name ae-t ; sig "[Val wave]" ; coefs "[Val track]" ; middle_frame 5 ; end 0.389286 ; num_frames 10 ; 
+27 id _27 ; name t-er ; sig "[Val wave]" ; coefs "[Val track]" ; middle_frame 8 ; end 0.55953 ; num_frames 16 ; 
+28 id _28 ; name er-iy ; sig "[Val wave]" ; coefs "[Val track]" ; middle_frame 4 ; end 0.669093 ; num_frames 10 ; 
+29 id _29 ; name iy-z ; sig "[Val wave]" ; coefs "[Val track]" ; middle_frame 6 ; end 0.789781 ; num_frames 11 ; 
+30 id _30 ; name z-pau ; sig "[Val wave]" ; coefs "[Val track]" ; middle_frame 7 ; end 1.01022 ; num_frames 22 ; 
+31 id _31 ; name coef ; coefs "[Val track]" ; frame "[Val wavevector]" ; 
+32 id _32 ; name f0 ; f0 "[Val track]" ; 
+33 id _33 ; coefs "[Val track]" ; 
+34 id _34 ; 
+35 id _35 ; map "[Val ivector]" ; 
+36 id _36 ; wave "[Val wave]" ; 
+End_of_Stream_Items
+Relations
+Relation Token ; "(" ")" ; 
+2 2 1 0 0 0
+1 1 0 2 0 0
+End_of_Relation
+Relation Word ; "(" ")" ; 
+1 2 0 0 0 0
+End_of_Relation
+Relation Phrase ; "(" ")" ; 
+2 2 1 0 0 0
+1 3 0 2 0 0
+End_of_Relation
+Relation Syllable ; "(" ")" ; 
+1 4 0 0 2 0
+2 5 0 0 3 1
+3 6 0 0 0 2
+End_of_Relation
+Relation Segment ; "(" ")" ; 
+1 7 0 0 2 0
+2 8 0 0 3 1
+3 9 0 0 4 2
+4 10 0 0 5 3
+5 11 0 0 6 4
+6 12 0 0 7 5
+7 13 0 0 8 6
+8 14 0 0 0 7
+End_of_Relation
+Relation SylStructure ; "(" ")" ; 
+5 8 2 0 6 0
+6 9 0 0 7 5
+7 10 0 0 0 6
+2 4 1 5 3 0
+8 11 3 0 0 0
+3 5 0 8 4 2
+9 12 4 0 10 0
+10 13 0 0 0 9
+4 6 0 9 0 3
+1 2 0 2 0 0
+End_of_Relation
+Relation IntEvent ; "(" ")" ; 
+1 15 0 0 2 0
+2 16 0 0 0 1
+End_of_Relation
+Relation Intonation ; "(" ")" ; 
+3 15 1 0 0 0
+1 6 0 3 2 0
+4 16 2 0 0 0
+2 4 0 4 0 1
+End_of_Relation
+Relation Target ; "(" ")" ; 
+6 23 1 0 0 0
+1 8 0 6 2 0
+7 22 2 0 0 0
+2 9 0 7 3 1
+8 20 3 0 9 0
+9 21 0 0 0 8
+3 11 0 8 4 2
+10 18 4 0 11 0
+11 19 0 0 0 10
+4 12 0 10 5 3
+12 17 5 0 0 0
+5 13 0 12 0 4
+End_of_Relation
+Relation Unit ; grouped 1 ; 
+1 24 0 0 2 0
+2 25 0 0 3 1
+3 26 0 0 4 2
+4 27 0 0 5 3
+5 28 0 0 6 4
+6 29 0 0 7 5
+7 30 0 0 0 6
+End_of_Relation
+Relation SourceCoef ; "(" ")" ; 
+1 31 0 0 0 0
+End_of_Relation
+Relation f0 ; "(" ")" ; 
+1 32 0 0 0 0
+End_of_Relation
+Relation TargetCoef ; "(" ")" ; 
+1 33 0 0 2 0
+2 34 0 0 0 1
+End_of_Relation
+Relation US_map ; "(" ")" ; 
+1 35 0 0 0 0
+End_of_Relation
+Relation Wave ; "(" ")" ; 
+1 36 0 0 0 0
+End_of_Relation
+End_of_Relations
+End_of_Utterance

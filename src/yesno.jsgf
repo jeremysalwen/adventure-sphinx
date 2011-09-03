@@ -1,0 +1,5 @@
+#JSGF v1.0;
+  
+grammar edu.jas.adventure.yesno;
+
+public <ynanswer> = (yes [please]) | yeah | okay| (no [thank you])| nope;
