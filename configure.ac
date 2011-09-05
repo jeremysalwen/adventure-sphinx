@@ -63,7 +63,7 @@ AC_MSG_CHECKING([festival libraries])
 AC_LINK_IFELSE(AC_LANG_PROGRAM([#include <festival.h>],[festival_initialize(TRUE,10000)])
 	,AC_MSG_RESULT([yes]),
 	AC_MSG_RESULT([no])
-	AC_MSG_ERROR([Could not find estools library.  Please specify the library path with --with-estools-lib-path=...]))
+	AC_MSG_ERROR([Could not find festival library.  Please specify the library path with --with-festival-lib-path=...]))
 
 AC_OUTPUT([
 Makefile
